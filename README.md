@@ -18,7 +18,7 @@
 
 ## Model Compression
 ### Survey
-- [Arxiv 2023][A Survey on Model Compression for Large Language Models](https://arxiv.org/abs/2308.07633).
+- [Arxiv 2023] [A Survey on Model Compression for Large Language Models](https://arxiv.org/abs/2308.07633).
 
 ### Low-rank  Decomposition
-- [Arxiv 2023][ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](https://arxiv.org/abs/2312.05821). Adding activation to the SVD process to migrate the outliters problem of activation. [Code](https://github.com/hahnyuan/ASVD4LLM)
+- [Arxiv 2023] [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](https://arxiv.org/abs/2312.05821). Adding activation to the SVD process to mitigate the outliters problem of activation. [Code](https://github.com/hahnyuan/ASVD4LLM)
