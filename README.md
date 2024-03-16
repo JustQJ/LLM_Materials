@@ -14,3 +14,11 @@
 - [open llm leaderboard.](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) Evaluating LLM model with six different task.
 - [tinyBenchmarks](https://huggingface.co/tinyBenchmarks), [paper](https://arxiv.org/abs/2402.14992). A small version of open llm leaderboard. This benchmark only contains 100 samples of each task.
 - [lm-evaluation-harness.](https://github.com/EleutherAI/lm-evaluation-harness) A evaluation tool, which can evaluate LLM on different tasks with sample commands.
+
+
+## Model Compression
+### Survey
+- [Arxiv 2023][A Survey on Model Compression for Large Language Models](https://arxiv.org/abs/2308.07633).
+
+### Low-rank  Decomposition
+- [Arxiv 2023][ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](https://arxiv.org/abs/2312.05821). Adding activation to the SVD process to migrate the outliters problem of activation. [Code](https://github.com/hahnyuan/ASVD4LLM)
