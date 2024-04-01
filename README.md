@@ -4,6 +4,8 @@
 ## LLM Training
 
 ### Techniques
+- [Arxiv 2024] [LoRA+: Efficient Low Rank Adaptation of Large Models](https://arxiv.org/abs/2402.12354). Applying different learning rate to adapter matrices A and B in LoRA. [Code](https://github.com/nikhil-ghosh-berkeley/loraplus)
+- [Arxiv 2021] [LORA: LOW-RANK ADAPTATION OF LARGE LANGUAGE MODELS](https://arxiv.org/abs/2106.09685).  Training large model with minor trainable parameters by using low rank adapters. [Code](https://github.com/microsoft/LoRA)
 
 ### Datasets
 - [some open hug datasets.](https://kili-technology.com/large-language-models-llms/9-open-sourced-datasets-for-training-large-language-models) Mainly used for pretrain LLM.
