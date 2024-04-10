@@ -36,6 +36,7 @@
 
 
 ## ML System
+
 ### Training System
 - [ATC 2023] [SmartMoE: Efficiently Training Sparsely-Activated Models through Combining Offline and Online Parallelization](https://www.usenix.org/conference/atc23/presentation/zhai). Dynamic runtime selection of optimal parallel strategy is enabled by efficient searching algorithm. [Code](https://github.com/zms1999/SmartMoE)
 - [ATC 2023] [Accelerating Distributed MoE Training and Inference with Lina](https://www.usenix.org/conference/atc23/presentation/li-jiamin). First,  ystematically analyzing all-to-all overhead in distributed MoE and present the main causes for it to be the bottleneck in training and inference, respectively. Second, designing and building Lina to address the all-to-all bottleneck head-on. Lina opportunistically prioritizes all-to-all over the concurrent allreduce whenever feasible using tensor partitioning, so all-to-all and training step time is improved.
@@ -56,3 +57,9 @@
 - [Arxiv 2023] [SiDA: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](https://arxiv.org/abs/2310.18859). Proposing an offline training strategy to build a data-aware hash function deployed in SiDA that replaces the router function in MoE layers. The hash function can produce all needed experts of all layers in this iteration. 
 - [Arxiv 2023] [EdgeMoE: Fast On-Device Inference of MoE-based Large Language Models](https://arxiv.org/abs/2308.14352). This design is underpinned by a crucial insight that expert weights, though voluminous, are infrequently accessed due to sparse activation patterns. To further mitigate the overhead associated with expert I/O swapping, EdgeMoE incorporates two innovative techniques: (1) Expert-wise bitwidth adaptation: This method reduces the size of expert weights with an acceptable level of accuracy loss. (2) Expert management: It predicts the experts that will be activated in advance and preloads them into the compute-I/O pipeline, thus further optimizing the process. 
 - [Arxiv 2023] [SwapMoE: Efficient Memory-Constrained Serving of Large Sparse MoE Models via Dynamic Expert Pruning and Swapping](https://arxiv.org/abs/2308.15030) When missing experts in GPU memory, skipping these missed experts or using other experts (in GPU memory) to replace these. 
+
+### Some Collections
+- https://github.com/Shenggan/awesome-distributed-ml
+- https://github.com/byungsoo-oh/ml-systems-papers
+- https://github.com/UbiquitousLearning/Paper-list-resource-efficient-large-language-model
+- https://github.com/inpluslab-wuhui/Systems-for-Foundation-Models
