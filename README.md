@@ -65,6 +65,8 @@
 - [Arxiv 2023] [SwapMoE: Efficient Memory-Constrained Serving of Large Sparse MoE Models via Dynamic Expert Pruning and Swapping](https://arxiv.org/abs/2308.15030) When missing experts in GPU memory, skipping these missed experts or using other experts (in GPU memory) to replace these. 
 - [Arxiv 2023] [STI: Turbocharge NLP Inference at the Edge via Elastic Pipelining](https://arxiv.org/abs/2207.05022). STI identifies that loading parameters time is highly longer than computation time. To address this problem, STI proposes dynamically adapting weights bit-width during the loading procedure according to parameters importance, minimizing loading overhead under maximum inference accuracy.
 - [Arxiv 2023] [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](https://arxiv.org/abs/2312.12456). Major neurons in weigt matrix of LLM are cold. PowerInfer exploits such an insight to design a GPU-CPU hybrid inference engine: hot-activated neurons are preloaded onto the GPU for fast access, while cold-activated neurons are computed on the CPU, thus significantly reducing GPU memory demands and CPU-GPU data transfers. [Code](https://github.com/SJTU-IPADS/PowerInfer)
+- [Arxiv 2023] [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](https://arxiv.org/abs/2310.17157). DEJAVU uses a low-cost algorithm to predict contextual sparsity on the fly given inputs to each layer, along with an asynchronous and hardwareaware implementation that speeds up LLM inference. [Code](https://github.com/FMInference/DejaVu)
+
 ### Some Collections
 - https://github.com/Shenggan/awesome-distributed-ml
 - https://github.com/byungsoo-oh/ml-systems-papers
