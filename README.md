@@ -41,6 +41,8 @@ Recording some materials about LLM.
 
 
 ### Sparsity
+- [Arxiv 2024] [Turbo Sparse: Achieving LLM SOTA Performance with Minimal Activated Parameters](https://arxiv.org/abs/2406.05955). Simply replacing these functions with ReLU fails to achieve sufficient sparsity. Moreover, inadequate training data can further increase the risk of performance degradation. To address these challenges, this work proposes a novel dReLU function (add relu to both gate and up modules rather than original only gate module in ffn), which is designed to improve LLM activation sparsity, along with a high-quality training data mixture ratio to facilitate effective sparsification. [Code](https://huggingface.co/PowerInfer)
+
 - [Arxiv 2024] [ReLU2 Wins: Discovering Efficient Activation Functions for Sparse LLMs](https://arxiv.org/abs/2402.03804). Introducing a general method that defines neuron activation through neuron output magnitudes and a tailored magnitude threshold, demonstrating that non-ReLU LLMs also exhibit sparse activation. To find the most efficient activation function for sparse computation, proposing a systematic framework to examine the sparsity of LLMs from three aspects: the trade-off between sparsity and performance, the predictivity of sparsity, and the hardware affinity. 
 - [Arxiv 2024] [ProSparse: Introducing and Enhancing Intrinsic Activation Sparsity within Large Language Models](https://arxiv.org/abs/2402.13516). This paper introduces an effective sparsification method named "ProSparse" to push LLMs for higher activation sparsity without decreasing model performance. Specifically, after substituting the activation function of LLMs with ReLU, ProSparse adopts progressive sparsity regularization with a factor smoothly increasing along sine curves in multiple stages. ProSparse obtain high sparsity of 89.32% and 88.80% for LLaMA2-7B and LLaMA2-13B, respectively, achieving comparable performance to their original Swish-activated versions. [Code1](https://github.com/Raincleared-Song/sparse_gpu_operator) [Code2](https://huggingface.co/SparseLLM/prosparse-llama-2-7b)
 - [Arxiv 2024] [CATS: Contextually-Aware Thresholding for Sparsity in Large Language Models](https://arxiv.org/pdf/2404.08763.pdf). Introducing a new framework for sparsifying the activations of base LLMs and reducing inference costs, dubbed Contextually Aware Thresholding for Sparsity(CATS). Mainly setting threshold for non-relu activation function to obtain sparsity. 
@@ -68,6 +70,7 @@ Recording some materials about LLM.
 - [OSDI 2020] [A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters](https://www.usenix.org/conference/osdi20/presentation/jiang) [Code](https://github.com/bytedance/byteps)
 - [Arxiv 2022] [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](https://arxiv.org/abs/2201.05596). An end-to-end MoE training and inference system. [Code](https://github.com/microsoft/DeepSpeed)
 ### Inference System 
+- [Arxiv 2024] [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](https://arxiv.org/abs/2406.06282). PowerInfer-2, a framework designed for high-speed inference of Large Language Models (LLMs) on smartphones. The key insight of PowerInfer-2 is to utilize the heterogeneous computation, memory, and I/O resources in smartphones by decomposing traditional matrix computations into fine-grained neuron cluster computations. PowerInfer-2 is the first system to serve the TurboSparse-Mixtral-47B model with a generation rate of 11.68 tokens per second on a smartphone, achieving up to a 29.2x speed increase compared with state-of-the-art frameworks. [Project](https://powerinfer.ai/v2/)
 - [Arxiv 2024] [MOE-INFINITY: Activation-Aware Expert Offloading for Efficient MoE Serving](https://arxiv.org/abs/2401.14361).  Designing a cost-efficient mixture-of-expert (MoE) serving system that realizes activation-aware expert offloading, including sequence-level tracing, activation-aware expert prefetching and caching techniques. [Code](https://github.com/TorchMoE/MoE-Infinity)
 - [Arxiv 2024] [Exploiting Inter-Layer Expert Affinity for Accelerating Mixture-of-Experts Model Inference](https://arxiv.org/abs/2401.08383). Finding MoE models implicitly exhibit a strong inter-layer expert affinity, and only using one Alltoall communication to deliver the same functionality while previous methods all require two Alltoalls. [Code](https://github.com/YJHMITWEB/ExFlow)
 - [Arxiv 2024] [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](https://arxiv.org/abs/2402.07033).  Fiddler is a resource-efficient inference engine with CPU-GPU orchestration for MoE models. The key idea of Fiddler is to use the computation ability of the CPU to minimize the data movement between the CPU and GPU. Move activation from GPU to CPU rather than move weights from CPU to GPU. [Code](https://github.com/efeslab/fiddler)
@@ -82,11 +85,16 @@ Recording some materials about LLM.
 - [Arxiv 2023] [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](https://arxiv.org/abs/2312.12456). Major neurons in weigt matrix of LLM are cold. PowerInfer exploits such an insight to design a GPU-CPU hybrid inference engine: hot-activated neurons are preloaded onto the GPU for fast access, while cold-activated neurons are computed on the CPU, thus significantly reducing GPU memory demands and CPU-GPU data transfers. [Code](https://github.com/SJTU-IPADS/PowerInfer)
 - [Arxiv 2022] [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](https://arxiv.org/abs/2207.00032). DeepSpeed Inference consists of (1) a multi-GPU inference solution to minimize latency while maximizing the throughput of both dense and sparse transformer models when they fit in aggregate GPU memory, and (2) a heterogeneous inference solution that leverages CPU and NVMe memory in addition to the GPU memory and compute to enable high inference throughput with large models which do not fit in aggregate GPU memory. [Code](https://github.com/microsoft/DeepSpeed)
 
-
-
-
 ### Some Collections
 - https://github.com/Shenggan/awesome-distributed-ml
 - https://github.com/byungsoo-oh/ml-systems-papers
 - https://github.com/UbiquitousLearning/Paper-list-resource-efficient-large-language-model
 - https://github.com/inpluslab-wuhui/Systems-for-Foundation-Models
+
+### Projects
+- https://github.com/karpathy/llm.c
+
+## Multimodel LLM
+### Survey
+
+- [Arxiv 2024] [Efficient Multimodal Large Language Models: A Survey](https://arxiv.org/abs/2405.10739).  provide a comprehensive and systematic review of the current state of efficient MLLMs. [Code](https://github.com/lijiannuist/Efficient-Multimodal-LLMs-Survey)
