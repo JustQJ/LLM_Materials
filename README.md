@@ -54,6 +54,15 @@ Recording some materials about LLM.
 - [Arxiv 2023] [ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models](https://arxiv.org/abs/2310.04564). ReLU activation function has a negligible impact on convergence and performance while significantly reducing computation and weight transfer when comparing with other activation functions, such as GELU, SiLU.  
 - [Arxiv 2022] [The Lazy Neuron Phenomenon: On Emergence of Activation Sparsity in Transformers](https://arxiv.org/abs/2210.06313). Studying the curious phenomenon for machine learning models with Transformer architectures that their activation maps are sparse. 
 
+
+### Quantization
+
+- [Arxiv 2024] [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](https://arxiv.org/abs/2402.17764). Introduce a 1-bit LLM variant, namely BitNet b1.58, in which every single parameter (or weight) of the LLM is ternary {-1, 0, 1}. 
+
+- [Arxiv 2023] [BitNet: Scaling 1-bit Transformers for Large Language Models](https://arxiv.org/abs/2310.11453).  Introduce BitLinear as a drop-in replacement of the nn.Linear layer in order to train 1-bit weights (-1 or 1) from scratch. 
+
+
+
 ## LLM System
 ### Survey
 - [Arxiv 2024] [A Survey of Resource-efficient LLM and Multimodal Foundation Models](https://arxiv.org/abs/2401.08092). This survey delves into the critical importance of such research, examining both algorithmic and systemic aspects. It offers a comprehensive analysis and valuable insights gleaned from existing literature, encompassing a broad array of topics from cutting-edge model architectures and training/serving algorithms to practical system designs and implementations.
